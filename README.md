@@ -3,7 +3,7 @@
 
 ## (1)QUdpSocket接收数据
         进入槽后，要用这种方式读取，否则可能会导致不发readyRead()信号
-        ```c++
+        ```c
         while(udpSocket->bytesAvailable())
         {
             udpSocket->readDatagram(ch,size);
