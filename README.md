@@ -18,3 +18,11 @@
 ## (4)可以在pro文件中写上标记版本号+ico图标
         VERSION = 2019.08.08
         RC_ICONS = main.ico
+## (5)解决socket传输后等中文乱码
+        转成base64传输
+        QByteArray(QString.toStdString().data()).toBase64()
+## (6)QT连接MySql后，长时间无操作（默认8小时）会断开。
+        isOpen()等函数无法判断
+        需执行命令通过返回值判断
+
+        
