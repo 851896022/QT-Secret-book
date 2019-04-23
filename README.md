@@ -22,7 +22,8 @@
         转成base64传输
         QByteArray(QString.toStdString().data()).toBase64()
 ## (6)QT连接MySql后，长时间无操作（默认8小时）会断开。
-        isOpen()等函数无法判断
-        需执行命令通过返回值判断
+        isOpen()等函数无法判断，需执行sql语句才能发现失败
+        QSqlDatabase.setConnectOptions("MYSQL_OPT_RECONNECT=1");
+        ↑断开后可自动重连
 
         
