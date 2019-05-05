@@ -25,6 +25,7 @@
         isOpen()等函数无法判断，需执行sql语句才能发现失败
         QSqlDatabase.setConnectOptions("MYSQL_OPT_RECONNECT=1");
         ↑断开后可自动重连
+## (7)在槽使用sender()函数可获取到发出信号的对象的指针。
 
         
 ‘I am a boy’
