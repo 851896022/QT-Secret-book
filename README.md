@@ -26,6 +26,17 @@
         QSqlDatabase.setConnectOptions("MYSQL_OPT_RECONNECT=1");
         ↑断开后可自动重连
 ## (7)在槽使用sender()函数可获取到发出信号的对象的指针。
+## (8)子线程中使用QAxWidget不成功，原因是在QApplication的主线程中，会自动初始化COM库，而新开辟的子线程不会自动初始化COM库，所以需要我们手动来初始化。
+        //添加头文件
+        #include <windows.h>
+        //在线程开始的时候初始化COM库：
+        HRESULT r = OleInitialize(0);
+        if (r != S_OK && r != S_FALSE)
+        {
+                qWarning("Qt:初始化Ole失败（error %x）",(unsigned int)r);
+        }
+        使用结束后需要释放掉：
+        OleUninitialize();
 
         
 
