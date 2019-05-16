@@ -38,6 +38,14 @@
         使用结束后需要释放掉：
         OleUninitialize();
 ## （9）file.write()以后调用file.flush()避免数据在缓存中未成功写入。
+## （10）延时。
+    {
+        QEventLoop loop;
+        QTimer t;
+        connect(&t,SIGNAL(timeout()),&loop,SLOT(quit()));
+        t.start(1000);
+        loop.exec();
+    }
             
 
         
