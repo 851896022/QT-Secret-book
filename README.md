@@ -37,6 +37,8 @@
         }
         使用结束后需要释放掉：
         OleUninitialize();
+## （9）file.write()以后调用file.flush()避免数据在缓存中未成功写入。
+            
 
         
 
