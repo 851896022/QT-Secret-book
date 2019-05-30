@@ -46,7 +46,7 @@
         t.start(1000);
         loop.exec();
     }
-            
+## （10）libmysql.dll需要vc++运行库！！libmysql.dll需要vc++运行库！！libmysql.dll需要vc++运行库！！     
 
         
 
